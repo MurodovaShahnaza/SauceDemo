@@ -25,10 +25,7 @@ public class LoginPage extends BasePage {
         driver.findElement(LOGIN_BUTTON).click();
     }
 
-
     public String getErrorMessage(){
         return driver.findElement(ERROR_MESSAGE).getText();
     }
-
-
 }

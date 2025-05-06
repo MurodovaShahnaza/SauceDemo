@@ -9,22 +9,26 @@ import static org.testng.Assert.assertEquals;
 
 public class ProductsTest extends BaseTest{
 
-    @Test
+    @Test(testName = "Проверка добавления товара в корзину",
+            description = "Добавляем товар и проверяем его наличие")
 
-    public void AddProductsToTheCart(){
+    public void addProductsToTheCart(){
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         /*явное ожидание*/
         productsPage.getTitle();
-        productsPage.ClickAdd();
+        productsPage.clickAdd();
         productsPage.getText();
         Assert.assertEquals(productsPage.getText(),
                 "Remove",
                 "Товар не в корзине");
-        productsPage.CheckProductInTheCart();
+        productsPage.checkProductInTheCart();
         Assert.assertEquals(productsPage.getNameProducts(),
-                "Checkout: Your Information",
+                "Sauce Labs Backpack",
                 "Товар нет в козине");
-        productsPage.Checkout();
+        productsPage.checkout();
+        Assert.assertEquals(checkoutPage.getTitle(),
+                "Checkout: Your Information",
+                "Вы не перешли на страницу регистрации");
     }
 }

@@ -25,7 +25,7 @@ public class ProductsPage extends BasePage {
 
     }
 
-    public void ClickAdd(){
+    public void clickAdd(){
         driver.findElement(ADD_TO_CART_BUTTON).click();
     }
 
@@ -33,20 +33,18 @@ public class ProductsPage extends BasePage {
         return driver.findElement(REMOVE_BUTTON).getText();
     }
 
-    public void CheckProductInTheCart(){
+    public void checkProductInTheCart(){
         driver.findElement(SHOPPING_CART_BUTTON).click();
     }
 
-    public String getNameProducts(){
-        return  driver.findElement(INVENTORY_ITEM_NAME).getText();
-    }
 
-    public void Checkout(){
+    public void checkout(){
         driver.findElement(CHECKOUT).click();
 
     }
-
-
+    public String getNameProducts(){
+        return  driver.findElement(INVENTORY_ITEM_NAME).getText();
+    }
 }
 
 

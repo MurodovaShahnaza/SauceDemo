@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -10,7 +11,8 @@ public class LoginTest extends BaseTest{
 
 
 
-    @Test
+    @Test (testName = "Негативный тест логина",
+            description = "Проверка логина в систему с пустым полем пароль")
     public void checkLoginWithEmptyPassword() {
         loginPage.open();
         loginPage.login("standard_user", "");
@@ -19,7 +21,8 @@ public class LoginTest extends BaseTest{
                 "Сообщение об ошибке не появилось");
     }
 
-    @Test
+    @Test (testName = "Негативный тест логин",
+            description = "Проверка логина в системе с ложным паролем")
     public void checkLoginWithWrongPassword() {
         loginPage.open();
         loginPage.login("standard_user", "123456");
@@ -28,7 +31,8 @@ public class LoginTest extends BaseTest{
                 "Сообщение об ошибке не появилось");
     }
 
-    @Test
+    @Test (testName = "Негативный тест логин",
+            description = "Проверка логина в системе с пустым полем логин")
     public void checkLoginWithEmptyUsername() {
         loginPage.open();
         loginPage.login("", "secret_sauce");
@@ -37,7 +41,8 @@ public class LoginTest extends BaseTest{
                 "Сообщение об ошибке не появилось");
     }
 
-    @Test
+    @Test (testName = "Положительный тест",
+            description = "Полностью верное заполнение")
     public void checkLoginWithPositiveCred(){
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
