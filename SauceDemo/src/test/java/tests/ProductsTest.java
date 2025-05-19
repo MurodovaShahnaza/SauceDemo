@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,6 +10,15 @@ import static org.testng.Assert.assertEquals;
 
 public class ProductsTest extends BaseTest{
 
+    @Epic("Добавление товара в корзину")
+    @Feature("Форма корзины")
+    @Story("проверка наличия в корзине")
+    @Description("проверка добавления товара и его наличие")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Shahnoza Murodova")
+    @TmsLink("SD-0001")
+    @Issue("SD-BUG-0001")
+    @Flaky
     @Test(testName = "Проверка добавления товара в корзину",
             description = "Добавляем товар и проверяем его наличие")
 

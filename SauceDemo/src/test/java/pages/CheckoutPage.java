@@ -1,7 +1,9 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import tests.AllureUtils;
 
 public class CheckoutPage extends BasePage {
 
@@ -20,6 +22,7 @@ public class CheckoutPage extends BasePage {
         return driver.findElement(TITLE).getText();
     }
 
+    @Step("Заполнение вормы покупателя с именем:{firstName} ,фамилией:{lastName} и  индексом: {postalCode}")
     public void check (String name, String lname, String Code) {
         driver.findElement(FIRSTNAME).sendKeys(name);
         driver.findElement(LASTNAME).sendKeys(lname);

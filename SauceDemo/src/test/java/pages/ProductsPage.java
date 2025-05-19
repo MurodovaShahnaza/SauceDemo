@@ -1,7 +1,9 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import tests.AllureUtils;
 
 public class ProductsPage extends BasePage {
 
@@ -25,8 +27,10 @@ public class ProductsPage extends BasePage {
 
     }
 
+    @Step("Добавление товара в корзину")
     public void clickAdd(){
         driver.findElement(ADD_TO_CART_BUTTON).click();
+
     }
 
     public String getText(){
@@ -38,6 +42,7 @@ public class ProductsPage extends BasePage {
     }
 
 
+    @Step("Нажатие на кнопку CHECKOUT")
     public void checkout(){
         driver.findElement(CHECKOUT).click();
 
