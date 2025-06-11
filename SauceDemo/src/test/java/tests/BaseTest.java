@@ -22,7 +22,7 @@ public class BaseTest {
     OverviewPage overviewPage;
 
     @BeforeMethod
-    public void setup() {
+    public void setup1() {
         ChromeOptions options = new ChromeOptions();
         HashMap<String, Object> chromePrefs = new HashMap<>();
         chromePrefs.put("credentials_enable_service", false);
