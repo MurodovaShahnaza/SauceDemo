@@ -10,7 +10,7 @@ public class CheckoutTest extends BaseTest {
     public void CheckEmptyFieldsError() {
 
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(user,password);
         productsPage.getTitle();
         productsPage.ClickAdd();
         productsPage.CheckProductInTheCart();
@@ -26,7 +26,7 @@ public class CheckoutTest extends BaseTest {
     public void CheckTheFirstNameError() {
 
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(user,password);
         productsPage.getTitle();
         productsPage.ClickAdd();
         productsPage.CheckProductInTheCart();
@@ -42,7 +42,7 @@ public class CheckoutTest extends BaseTest {
     public void CheckTheLastNameError() {
 
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(user,password);
         productsPage.getTitle();
         productsPage.ClickAdd();
         productsPage.CheckProductInTheCart();
@@ -58,7 +58,7 @@ public class CheckoutTest extends BaseTest {
     public void CheckThePostalCodeError() {
 
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(user,password);
         productsPage.getTitle();
         productsPage.ClickAdd();
         productsPage.CheckProductInTheCart();
@@ -74,7 +74,7 @@ public class CheckoutTest extends BaseTest {
     public void CheckCorrectFilling() {
 
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(user,password);
         productsPage.getTitle();
         productsPage.ClickAdd();
         productsPage.CheckProductInTheCart();

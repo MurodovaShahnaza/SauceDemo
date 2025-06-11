@@ -11,7 +11,7 @@ public class ProductsTest extends BaseTest{
 
     public void AddProductsToTheCart(){
         loginPage.open();
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(user, password);
         /*явное ожидание*/
         productsPage.getTitle();
         productsPage.ClickAdd();

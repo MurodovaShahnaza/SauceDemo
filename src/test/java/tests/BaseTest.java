@@ -21,6 +21,9 @@ public class BaseTest {
     CheckoutPage checkoutPage;
     OverviewPage overviewPage;
 
+    String user = System.getProperty("user", PropertyReader.getProperty("user"));
+    String password = System.getProperty("password", PropertyReader.getProperty("password"));
+
     @BeforeMethod
     public void setup() {
         ChromeOptions options = new ChromeOptions();
@@ -40,11 +43,13 @@ public class BaseTest {
         productsPage = new ProductsPage(driver);
         checkoutPage = new CheckoutPage(driver);
         overviewPage = new OverviewPage(driver);
+
+        System.out.println(user);
+        System.out.println(password);
     }
 
     @AfterMethod
     public void tearDown() {
         driver.quit();
     }
-
 }
