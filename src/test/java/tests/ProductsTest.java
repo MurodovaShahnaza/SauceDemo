@@ -21,7 +21,7 @@ public class ProductsTest extends BaseTest{
                 "Товар не в корзине");
         productsPage.CheckProductInTheCart();
         Assert.assertEquals(productsPage.getNameProducts(),
-                "Checkout: Your Information",
+                "Sauce Labs Backpack",
                 "Товар нет в козине");
         productsPage.Checkout();
     }
