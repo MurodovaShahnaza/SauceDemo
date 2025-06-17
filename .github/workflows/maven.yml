@@ -14,15 +14,13 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+    LOGIN:${{secrets.SD_USER}}
+    PASS:${{secrets.SD_PASS}}
 jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    env:
-      LOGIN:${{secrets.SD_USER}}
-      PASS:${{secrets.SD_PASS}}
-
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
